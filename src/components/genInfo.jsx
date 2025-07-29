@@ -3,7 +3,7 @@ function GenInfo() {
     return <>
 
             <section>
-                <h2>Enter General Info Here!</h2>
+                <h2>General Info</h2>
                 <form>
                     <label for='firstName'>First Name:</label>
                     <input type="text" name="firstName" id="firstName" placeholder="John"></input>
