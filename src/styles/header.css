@@ -1,16 +1,18 @@
+@import 'global.css';
+
 header {
     min-height: 250px;
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: #2A5D9F;
+    background-color: var(--primary-color);
 }
 
 h1{
     background-color: rgba(0, 0, 0, 40%);
     border-radius: 10px;
     font-size: 52px;
-    color: white;
+    color: var(--blueBackText);
     padding: 10px 20px;
     transform: translate(100vw, 50px);
     transition: transform 1s 1s ease-out;
