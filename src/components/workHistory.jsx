@@ -3,7 +3,7 @@ import React from "react";
 function WorkHistory() {
   return (
     <>
-      <div>
+      <div id="workHistoryCtr">
         <h2>Work History</h2>
         <form>
           <div>

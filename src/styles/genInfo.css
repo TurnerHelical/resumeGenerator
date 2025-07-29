@@ -10,10 +10,7 @@
     font-size: 32px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#genForm {
     gap: 20px;
     padding: 30px;
 }

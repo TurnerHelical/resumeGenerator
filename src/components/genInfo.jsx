@@ -6,7 +6,7 @@ function GenInfo() {
     <>
       <div id="genCtr">
         <h2>General Info</h2>
-        <form>
+        <form id="genForm">
           <div className="formFields">
             <label htmlFor="firstName" className="genLabel">First Name:</label>
             <input

@@ -6,7 +6,7 @@ function Edu() {
     <>
       <div id="eduCtr">
         <h2>Education</h2>
-        <form>
+        <form id="eduForm">
           <div className="school">
             <div className="formFields">
               <label htmlFor="schoolName" className="eduLabel">Name of the issuing entity:</label>

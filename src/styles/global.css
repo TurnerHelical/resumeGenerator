@@ -19,3 +19,9 @@
 body {
     background-color: var(--bg-light);
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
