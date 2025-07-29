@@ -1,0 +1,28 @@
+#genCtr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#genCtr h2 {
+    font-size: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.formFields {
+    display: flex;
+    gap: 10px;
+}
+
+.genLabel {
+    min-width: 100px;
+    text-align: center;
+    transform: translateY(5px);
+}

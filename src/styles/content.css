@@ -1,3 +1,18 @@
 main {
     min-height: 1000px;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    align-items: center;
+}
+
+#genInfo {
+   grid-area: 1 / 1 / 2 / 2;
+}
+
+#edu {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#workHistory {
+    grid-area: 2 / 1 / 3 / 3;
 }

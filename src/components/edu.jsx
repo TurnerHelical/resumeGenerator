@@ -2,7 +2,7 @@ function Edu() {
 
   return (
     <>
-      <section>
+      <div>
         <h2>Education</h2>
         <form>
           <div className="school">
@@ -25,7 +25,7 @@ function Edu() {
          <button id="anotherEdu" className="btn">Add Another</button>
          <button id="confirmEdu" className="btn">Confirm</button>
         </form>
-      </section>
+      </div>
     </>
   );
 }

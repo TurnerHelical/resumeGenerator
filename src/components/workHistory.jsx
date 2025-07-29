@@ -1,7 +1,7 @@
 function WorkHistory() {
   return (
     <>
-      <section>
+      <div>
         <h2>Work History</h2>
         <form>
           <div>
@@ -22,7 +22,7 @@ function WorkHistory() {
           <button id="anotherJob">Add Another</button>
           <button id="confirmHistory">Confirm</button>
         </form>
-      </section>
+      </div>
     </>
   );
 }

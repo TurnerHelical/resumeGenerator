@@ -8,9 +8,18 @@ function Content() {
 
     return <>
             <main>
-                <GenInfo />
-                <Edu />
-                <WorkHistory />
+                <section id='genInfo'>
+                    <GenInfo />
+                </section>
+                
+                <section id='edu'>
+                    <Edu />
+                </section>
+                
+                <section id='workHistory'>
+                    <WorkHistory />
+                </section>
+                
             </main>
 
 
