@@ -1,5 +1,44 @@
+@import './global.css';
+
 #workHistoryCtr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
+
+#workHistoryCtr h2{
+    font-size: 32px;
+}
+
+#whForm {
+    gap: 20px;
+}
+
+.jobInfo {
+    display: flex;
+    gap: 20px;
+}
+
+.whLabel {
+    min-width: 150px;
+    transform: translateY(3px);
+}
+
+#dateRangeCtr {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+#dateRange {
+    display: flex;
+    gap: 15px;
+}
+
+#jobBtnCtr {
+    display: flex;
+    gap: 20px;
+}
+
