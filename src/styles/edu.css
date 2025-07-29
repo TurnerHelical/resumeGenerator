@@ -1,0 +1,26 @@
+#eduCtr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#eduCtr h2 {
+    font-size: 32px;
+}
+
+.school {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.eduLabel {
+    min-width: 300px;
+    text-align: center;
+}
+
+.btnCtr {
+    display: flex;
+    gap: 20px;
+}
+

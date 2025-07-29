@@ -16,7 +16,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--blueBackText);
+    color: var(--lightText);
     gap: 30px;
 }
 
@@ -29,9 +29,9 @@ footer {
 
 
 .creatorInfo li {
-    color: var(--blueBackText);
+    color: var(--lightText);
 }
 
 .placeholder {
-    color: var(--blueBackText);
+    color: var(--lightText);
 }
