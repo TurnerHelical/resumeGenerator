@@ -4,8 +4,8 @@ import "../styles/workHistory.css";
 function WorkHistory() {
   return (
     <>
-      <div id="workHistoryCtr">
-        <h2 id="workHistoryTitle">Work History</h2>
+      
+        
         <form id="whForm">
             <div className="jobInfo">
               <label htmlFor="company" className="whLabel">Company Name:</label>
@@ -54,7 +54,7 @@ function WorkHistory() {
           </button>
           </div>
         </form>
-      </div>
+      
     </>
   );
 }

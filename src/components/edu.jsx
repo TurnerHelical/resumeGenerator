@@ -4,8 +4,8 @@ import React from "react";
 function Edu() {
   return (
     <>
-      <div id="eduCtr">
-        <h2 id="eduTitle">Education</h2>
+      
+        
         <form id="eduForm">
           <div className="school">
             <div className="formFields">
@@ -46,7 +46,7 @@ function Edu() {
           </button>
           </div>
         </form>
-      </div>
+      
     </>
   );
 }

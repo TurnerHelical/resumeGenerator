@@ -2,11 +2,12 @@ import "../styles/genInfo.css";
 import React from "react";
 
 function GenInfo() {
+  
   return (
     <>
-      <div id="genCtr">
-        <h2 id="genTitle">General Info</h2>
-        <form id="genForm">
+      
+        
+        <form id="genForm" className="visible">
           <div className="formFields">
             <label htmlFor="Name" className="genLabel">Full Name:</label>
             <input
@@ -38,7 +39,7 @@ function GenInfo() {
           </div>
           <button id="confirmInfo" className="globalBtn">Confirm</button>
         </form>
-      </div>
+      
     </>
   );
 }
