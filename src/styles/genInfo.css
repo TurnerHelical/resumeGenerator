@@ -3,7 +3,6 @@
 #genForm {
     gap: 20px;
     padding: 30px;
-    display: none;
 }
 
 #genForm.visible {

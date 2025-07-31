@@ -12,19 +12,25 @@ function Content() {
     <>
       <main>
         <div id="sectionCtr">
-          <section id="genInfo">
+          <section>
             <h2 id="genTitle" className="sectionTitle">General Info</h2>
-            <GenInfo />
+            <div id="genInfo" className="hidden">
+                <GenInfo />
+            </div>
           </section>
 
-          <section id="edu">
+          <section>
           <h2 id="eduTitle" className="sectionTitle">Education</h2>
-            <Edu />
+            <div id="edu" className="hidden">
+                <Edu />
+            </div>
           </section>
 
-          <section id="workHistory">
+          <section>
           <h2 id="workHistoryTitle" className="sectionTitle">Work History</h2>
-            <WorkHistory />
+            <div id="workHistory" className="hidden">
+                <WorkHistory />
+            </div>
           </section>
         </div>
 
