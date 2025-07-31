@@ -4,6 +4,7 @@ main {
     display: flex;
     justify-content: space-around;
     min-height: 100vh;
+    background-color: var(--bg-dark);
 }
 
 #sectionCtr {
@@ -26,27 +27,60 @@ section {
     padding: 10px 10px;
     margin: 10px 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 80%);
+    background-color: var(--bg-light);
 }
+
+#initialTitle {
+    color: var(--lightText);
+    text-align: center;
+    font-size: 48px;
+    transform: translateX(25%);
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#initialTitle.disabled {
+    opacity: 0;
+}
+
+
 
 .sectionTitle {
     padding: 20px 100px;
     font-size: 32px;
     border: solid black 1px;
+    background-color: var(--bg-light);
     border-radius: 10px;
     max-width: 400px;
     min-width: 400px;
     height: 90px;
     text-align: center;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 80%);
+    transform: translateX(-140%);
+    transition: transform 0.3s ease; 
 }
+
 
 .sectionTitle:hover {
     background-color: var(--primary-color);
     box-shadow: none;
     color: var(--lightText);
     cursor: pointer;
+    transform: translateX(-75%);
+}
+
+.sectionTitle.open {
+    animation: replaceForm 1s 1s ease forwards;
+}
+
+.sectionTitle.close {
+    animation: return 1s ease forwards;
 }
 
 .hidden {
     display: none;
+}
+
+@keyframes replaceForm {
+ 
 }

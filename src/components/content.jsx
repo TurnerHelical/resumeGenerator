@@ -12,6 +12,7 @@ function Content() {
     <>
       <main>
         <div id="sectionCtr">
+            <h2 id="initialTitle" className="disabled">Click on a tab to begin!</h2>
           <section>
             <h2 id="genTitle" className="sectionTitle">General Info</h2>
             <div id="genInfo" className="hidden">
