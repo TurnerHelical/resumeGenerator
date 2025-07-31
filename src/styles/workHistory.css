@@ -5,13 +5,28 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 25px;
 }
 
-#workHistoryCtr h2{
+#workHistoryTitle{
+    padding: 20px 100px;
     font-size: 32px;
+    border: solid black 1px;
+    max-width: 400px;
+    min-width: 400px;
+    text-align: center;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 80%);
+}
+
+#workHistoryTitle:hover {
+    background-color: var(--primary-color);
+    box-shadow: none;
+    color: var(--lightText);
+    cursor: pointer;
 }
 
 #whForm {
+    display: none;
     gap: 20px;
 }
 

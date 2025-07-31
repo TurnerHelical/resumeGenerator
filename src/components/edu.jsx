@@ -5,7 +5,7 @@ function Edu() {
   return (
     <>
       <div id="eduCtr">
-        <h2>Education</h2>
+        <h2 id="eduTitle">Education</h2>
         <form id="eduForm">
           <div className="school">
             <div className="formFields">

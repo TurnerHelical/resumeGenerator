@@ -14,10 +14,10 @@ h1{
     font-size: 52px;
     color: var(--lightText);
     padding: 10px 20px;
-    transform: translate(100vw, 50px);
-    transition: transform 1s 1s ease-out;
+    opacity: 0;
+    transition: opacity 1s 0.5s ease-out;
 }
 
-.slide-in {
-    transform: translate(400px, 50px);
+.fade-in {
+    opacity: 1;
 }

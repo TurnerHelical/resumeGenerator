@@ -5,10 +5,24 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 25px;
 }
 
-#eduCtr h2 {
+#eduTitle {
+    padding: 20px 100px;
     font-size: 32px;
+    border: solid black 1px;
+    max-width: 400px;
+    min-width: 400px;
+    text-align: center;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 80%);
+}
+
+#eduTitle:hover {
+    background-color: var(--primary-color);
+    box-shadow: none;
+    color: var(--lightText);
+    cursor: pointer;
 }
 
 .school {
@@ -29,6 +43,7 @@
 
 #eduForm {
     gap: 20px;
+    display: none;
 }
 
 

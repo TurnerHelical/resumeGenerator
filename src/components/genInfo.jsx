@@ -5,26 +5,18 @@ function GenInfo() {
   return (
     <>
       <div id="genCtr">
-        <h2>General Info</h2>
+        <h2 id="genTitle">General Info</h2>
         <form id="genForm">
           <div className="formFields">
-            <label htmlFor="firstName" className="genLabel">First Name:</label>
+            <label htmlFor="Name" className="genLabel">Full Name:</label>
             <input
               type="text"
               name="firstName"
               id="firstName"
-              placeholder="John"
+              placeholder="John Smith"
             ></input>
           </div>
-          <div className="formFields">
-            <label htmlFor="lastName" className="genLabel">Last Name:</label>
-            <input
-              type="text"
-              name="lastName"
-              id="lastName"
-              placeholder="Smith"
-            ></input>
-          </div>
+         
           <div className="formFields">
             <label htmlFor="email" className="genLabel">Email Address:</label>
             <input
@@ -33,6 +25,16 @@ function GenInfo() {
               id="emailAddress"
               placeholder="Someone@something.com"
             ></input>
+          </div>
+          <div className="formFields">
+            <label htmlFor="address">Home Address:</label>
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="123 Sunny Lane">
+              </input>
+
           </div>
           <button id="confirmInfo" className="globalBtn">Confirm</button>
         </form>

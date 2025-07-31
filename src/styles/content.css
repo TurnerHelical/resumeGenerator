@@ -1,18 +1,23 @@
+@import './global.css';
+
 main {
-    min-height: 1000px;
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
-    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    min-height: 100vh;
 }
 
-#genInfo {
-   grid-area: 1 / 1 / 2 / 2;
+#sectionCtr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#edu {
-    grid-area: 1 / 2 / 2 / 3;
+#resumePaper {
+    min-height: 100%;
+    min-width: 500px;
+    border: black solid 2px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 80%);
 }
 
-#workHistory {
-    grid-area: 2 / 1 / 3 / 3;
-}

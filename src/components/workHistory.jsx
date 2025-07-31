@@ -5,7 +5,7 @@ function WorkHistory() {
   return (
     <>
       <div id="workHistoryCtr">
-        <h2>Work History</h2>
+        <h2 id="workHistoryTitle">Work History</h2>
         <form id="whForm">
             <div className="jobInfo">
               <label htmlFor="company" className="whLabel">Company Name:</label>
@@ -22,6 +22,15 @@ function WorkHistory() {
                 type="text"
                 name="jobTitle"
                 id="jobTitle"
+                placeholder="Jester"
+              ></input>
+            </div>
+            <div className="jobInfo">
+              <label htmlFor="tasks" className="whLabel">Responsibilities:</label>
+              <input
+                type="textArea"
+                name="tasks"
+                id="tasks"
                 placeholder="Jester"
               ></input>
             </div>
