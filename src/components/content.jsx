@@ -31,10 +31,10 @@ function Content() {
             Work History
           </h2>
         </div>
-        
         </div>
 
         <div id="resumePaper"></div>
+        
       </main>
     </>
   );
