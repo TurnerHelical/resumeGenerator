@@ -1,28 +1,24 @@
 @import './global.css';
 
 main {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
     min-height: 100vh;
     background-color: var(--bg-dark);
 }
 
-#sectionCtr {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 50px;
-}
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#TitleCtr {
+    grid-area: 1 / 1 / 2 / 3;
 }
 
+#contentCtr {
+    display: grid;
+    grid-template: .25fr 1fr /  1fr;
+}
 
 #resumePaper {
-    min-height: 100%;
-    min-width: 700px;
+    min-height: 100vh;
+    width: 600px;
     border: black solid 2px;
     padding: 10px 10px;
     margin: 10px 10px;
@@ -30,20 +26,32 @@ section {
     background-color: var(--bg-light);
 }
 
-#initialTitle {
+#pageTitle {
     color: var(--lightText);
     text-align: center;
     font-size: 48px;
-    transform: translateX(25%);
     opacity: 1;
     transition: opacity 1s ease;
+    margin-top: 30px;
 }
 
-#initialTitle.disabled {
+#pageTitle.disabled {
     opacity: 0;
 }
 
+#formCtr {
+    display: flex;
+    justify-content: center;
+}
 
+#formTitles {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 54%;
+    left: -17%;
+}
 
 .sectionTitle {
     padding: 20px 100px;
@@ -56,8 +64,8 @@ section {
     height: 90px;
     text-align: center;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 80%);
-    transform: translateX(-140%);
     transition: transform 0.3s ease; 
+    
 }
 
 
@@ -66,21 +74,9 @@ section {
     box-shadow: none;
     color: var(--lightText);
     cursor: pointer;
-    transform: translateX(-75%);
-}
-
-.sectionTitle.open {
-    animation: replaceForm 1s 1s ease forwards;
-}
-
-.sectionTitle.close {
-    animation: return 1s ease forwards;
+    transform: translateX(60%);
 }
 
 .hidden {
     display: none;
-}
-
-@keyframes replaceForm {
- 
 }

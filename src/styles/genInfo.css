@@ -2,11 +2,14 @@
 
 #genForm {
     gap: 20px;
-    padding: 30px;
+    padding: 30px 50px;
+    background-color: white;
+    border: 2px white solid;
+    border-radius: 10px;
 }
 
 #genForm.visible {
-    max-height: 300px;
+    max-height: 250px;
     visibility: visible;
 }
 
