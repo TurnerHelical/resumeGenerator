@@ -1,10 +1,11 @@
 @import './global.css';
 
 main {
-    display: grid;
-    grid-template: 1fr / 1fr 1fr;
+    display: flex;
     min-height: 100vh;
     background-color: var(--bg-dark);
+    justify-content: center;
+    gap: 200px;
 }
 
 #TitleCtr {

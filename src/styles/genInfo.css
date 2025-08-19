@@ -6,12 +6,10 @@
     background-color: white;
     border: 2px white solid;
     border-radius: 10px;
+    max-height: 250px;
+    min-width: 622px;
 }
 
-#genForm.visible {
-    max-height: 250px;
-    visibility: visible;
-}
 
 .formFields {
     display: flex;

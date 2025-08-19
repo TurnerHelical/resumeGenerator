@@ -2,8 +2,13 @@
 
 
 #whForm {
-    
     gap: 20px;
+    padding: 30px 50px;
+    background-color: white;
+    border: 2px white solid;
+    border-radius: 10px;
+    max-height: 350px;
+    min-width:622px;
 }
 
 .jobInfo {

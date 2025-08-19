@@ -7,7 +7,7 @@ function GenInfo() {
     <>
       
         
-        <form id="genForm" className="visible">
+        <form id="genForm">
           <div className="formFields">
             <label htmlFor="Name" className="genLabel">Full Name:</label>
             <input
