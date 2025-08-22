@@ -7,7 +7,6 @@
     background-color: white;
     border: 2px white solid;
     border-radius: 10px;
-    max-height: 350px;
     min-width:622px;
     border: 2px solid black;
     box-shadow: 0px 0px 5px rgba(232, 231, 235, 1);
@@ -20,7 +19,11 @@
 
 .whLabel {
     min-width: 150px;
-    transform: translateY(3px);
+    transform: translateY(5px);
+}
+
+#taskButton {
+    height: 28px;
 }
 
 #dateRangeCtr {
@@ -33,6 +36,10 @@
 #dateRange {
     display: flex;
     gap: 15px;
+}
+
+#dateRange label {
+    transform: translateY(5px);
 }
 
 #jobBtnCtr {

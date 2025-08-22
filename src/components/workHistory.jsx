@@ -25,7 +25,7 @@ function WorkHistory() {
                 placeholder="Jester"
               ></input>
             </div>
-            <div className="jobInfo">
+            <div className="jobInfo" >
               <label htmlFor="tasks" className="whLabel">Responsibilities:</label>
               <input
                 type="textArea"
@@ -33,16 +33,25 @@ function WorkHistory() {
                 id="tasks"
                 placeholder="Jester"
               ></input>
+              <button id="taskButton">+</button>
             </div>
+            <div id="taskListCtr">
+              <ul id="listOfTasks">
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task</li>
+              </ul>
+            </div>
+            
             <div id="dateRangeCtr">
               <p>When did you work there:</p>
               <div id="dateRange">
                 <label htmlFor="startDate">Start Date:</label>
-                <input type="date" name="startDate" id="startDate"></input>
+                <input type="month" name="startDate" id="startDate"></input>
               
               
                 <label htmlFor="endDate">End Date:</label>
-                <input type="date" name="endDate" id="endDate"></input>
+                <input type="month" name="endDate" id="endDate"></input>
               </div>
               </div>
           <div id="jobBtnCtr">
