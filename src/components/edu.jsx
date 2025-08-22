@@ -24,7 +24,17 @@ function Edu() {
                 type="text"
                 name="degree"
                 id="degree"
-                placeholder="Bachelors of Science in something relevant"
+                placeholder="Bachelors of Science"
+              ></input>
+            </div>
+            <div className="formFields">
+              <label htmlFor="program" className="eduLabel">
+                What program the degree is in:</label>
+              <input
+                type="text"
+                name="program"
+                id="program"
+                placeholder="Computer Science"
               ></input>
             </div>
             <div className="formFields">

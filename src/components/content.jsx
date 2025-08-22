@@ -73,6 +73,20 @@ function Content() {
               <p>2010-2014</p>
               <p>Orlando,FL</p>
             </div>
+            <div className="eduEntry">
+              <h5>University of Central Florida</h5>
+              <p>Bachelor's of Science</p>
+              <p>Computer Science</p>
+              <p>2010-2014</p>
+              <p>Orlando,FL</p>
+            </div>
+            <div className="eduEntry">
+              <h5>University of Central Florida</h5>
+              <p>Bachelor's of Science</p>
+              <p>Computer Science</p>
+              <p>2010-2014</p>
+              <p>Orlando,FL</p>
+            </div>
           </div>
           <div id="resumeWH">
             <h3>Work History</h3>
