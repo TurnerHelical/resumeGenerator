@@ -2,6 +2,18 @@ import React from "react";
 import "../styles/workHistory.css";
 
 function WorkHistory() {
+
+  window.onload = () => {
+    const taskButton = document.querySelector('#taskButton');
+    taskButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const taskList = document.querySelector('#listOfTasks');
+      const taskValue = document.querySelector('#tasks').value;
+      const task = document.createElement('li');
+      task.innerHTML = taskValue;
+      taskList.appendChild(task);
+    })
+  }
   return (
     <>
       
