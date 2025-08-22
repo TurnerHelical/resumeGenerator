@@ -28,7 +28,7 @@ function GenInfo() {
             ></input>
           </div>
           <div className="formFields">
-            <label htmlFor="address">Home Address:</label>
+            <label htmlFor="address" className="genLabel">Home Address:</label>
             <input
               type="text"
               name="address"
@@ -37,6 +37,7 @@ function GenInfo() {
               </input>
 
           </div>
+
           <button id="confirmInfo" className="globalBtn">Confirm</button>
         </form>
       
