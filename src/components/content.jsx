@@ -5,6 +5,14 @@ import WorkHistory from "./workHistory";
 import { useState } from "react";
 
 function Content() {
+  // const [genData, setGenData] = useState('');
+  // const [eduData, setEdu] = useState([]);
+  const [whData, setWhData] = useState([]);
+
+  const handleData = (data) => {
+    setWhData(data);
+  };
+  
   window.onload = () => {
     const sectionTitles = document.querySelector(".title");
     sectionTitles.classList.add("fade-in");
@@ -13,16 +21,16 @@ function Content() {
   const [activeSection, setActiveSection] = useState(null);
   const titleClick = (event) => {
     let titleId = event.currentTarget.id;
-    const contentTitle = document.querySelector('#pageTitle'); 
+    const contentTitle = document.querySelector("#pageTitle");
     if (titleId === "genTitle") {
-      contentTitle.innerHTML = 'General Info';
+      contentTitle.innerHTML = "General Info";
       setActiveSection("gen");
     } else if (titleId === "eduTitle") {
-      contentTitle.innerHTML = 'Education';
+      contentTitle.innerHTML = "Education";
       setActiveSection("edu");
     } else {
-      contentTitle.innerHTML = 'Work History';
-      setActiveSection("work"); 
+      contentTitle.innerHTML = "Work History";
+      setActiveSection("work");
     }
   };
   return (
@@ -35,9 +43,9 @@ function Content() {
             </h2>
           </div>
           <div id="formCtr">
-            {activeSection === "gen" && <GenInfo />}
-            {activeSection === "edu" && <Edu />}
-            {activeSection === "work" && <WorkHistory />}
+            {activeSection === "gen" && <GenInfo onDataReceived={handleData} />}
+            {activeSection === "edu" && <Edu onDataReceived={handleData}/>}
+            {activeSection === "work" && <WorkHistory onDataReceived={handleData}/>}
           </div>
           <div id="formTitles">
             <h2 id="genTitle" className="sectionTitle" onClick={titleClick}>
@@ -59,10 +67,10 @@ function Content() {
         <div id="resumePaper">
           <div id="resumeGenInfo">
             <h2 id="placedName">Hunter LeClair</h2>
-              <div id="addressCtr">
-                <p id="placedEmail">Hunterde91@gmail.com</p>
-                <p id="placedAddress">123 Sunny Lane Sarasota, FL 34231</p>
-              </div>
+            <div id="addressCtr">
+              <p id="placedEmail">Hunterde91@gmail.com</p>
+              <p id="placedAddress">123 Sunny Lane Sarasota, FL 34231</p>
+            </div>
           </div>
           <div id="resumeEdu">
             <h3>Education</h3>
@@ -90,50 +98,12 @@ function Content() {
           </div>
           <div id="resumeWH">
             <h3>Work History</h3>
-            <div className="workEntry">
-              <h5>Source1 Solutions - <i>Desktop Admin</i></h5>
-              <p>2024-2025</p>
-              <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-              </ul>
-            </div>
-            <div className="workEntry">
-              <h5>Source1 Solutions - <i>Desktop Admin</i></h5>
-              <p>2024-2025</p>
-              <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-              </ul>
-            </div>
-            <div className="workEntry">
-              <h5>Source1 Solutions - <i>Desktop Admin</i></h5>
-              <p>2024-2025</p>
-              <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-              </ul>
-            </div>
-            <div className="workEntry">
-              <h5>Source1 Solutions - <i>Desktop Admin</i></h5>
-              <p>2024-2025</p>
-              <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-              </ul>
-            </div>
+            <ul id="whSection">
+              {whData.map((w, i) => (
+                <li key={i}>{w}</li>
+              ))}
+              
+            </ul>
           </div>
         </div>
       </main>
