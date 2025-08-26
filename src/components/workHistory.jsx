@@ -22,11 +22,11 @@ import "../styles/workHistory.css";
 
 
 
-    const handleSubmit = (comp, jobTitle, tasktest, start, end) => {
+    const handleSubmit = (comp, jobTitle, tasks, start, end) => {
       const job =  {
       company: comp,
       title: jobTitle,
-      test: [...tasktest],
+      tasks: tasks,
       start: start,
       end: end,
       };

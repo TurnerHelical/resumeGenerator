@@ -177,7 +177,7 @@ function Content() {
               {whData.map((job, i) => (
                 <li key={i}>
                   <h4>
-                    {job.company} — {job.title}
+                    {job.company} — <em>{job.title}</em>
                   </h4>
                   <p>
                     {job.start} – {job.end}
