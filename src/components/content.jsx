@@ -3,6 +3,7 @@ import GenInfo from "./genInfo";
 import Edu from "./edu";
 import WorkHistory from "./workHistory";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Content() {
   // const [genData, setGenData] = useState('');
@@ -12,24 +13,15 @@ function Content() {
   const handleData = (data) => {
     setWhData(data);
   };
-  
-  window.onload = () => {
-    const sectionTitles = document.querySelector(".title");
-    sectionTitles.classList.add("fade-in");
-  };
 
   const [activeSection, setActiveSection] = useState(null);
   const titleClick = (event) => {
     let titleId = event.currentTarget.id;
-    const contentTitle = document.querySelector("#pageTitle");
     if (titleId === "genTitle") {
-      contentTitle.innerHTML = "General Info";
       setActiveSection("gen");
     } else if (titleId === "eduTitle") {
-      contentTitle.innerHTML = "Education";
       setActiveSection("edu");
     } else {
-      contentTitle.innerHTML = "Work History";
       setActiveSection("work");
     }
   };
@@ -38,14 +30,97 @@ function Content() {
       <main>
         <div id="contentCtr">
           <div id="TitleCtr">
-            <h2 id="pageTitle" className="">
-              Click on a tab to begin!
+            <h2 id="pageTitle">
+              <AnimatePresence mode="wait">
+              {activeSection === null && (
+                <motion.div
+                  key={null}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  >
+                    Click on a tab to begin!
+                  </motion.div>
+              )}
+
+              {activeSection === 'gen' && (
+                <motion.div
+                  key={'gen'}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  >
+                    General Info
+                  </motion.div>
+              )}
+              
+              {activeSection === 'edu' && (
+                <motion.div
+                  key={'edu'}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  >
+                    Education
+                  </motion.div>
+              )}
+              
+              {activeSection === 'work' && (
+                <motion.div
+                  key={'work'}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  >
+                    Work History
+                  </motion.div>
+            
+              )}
+              </AnimatePresence>
             </h2>
           </div>
           <div id="formCtr">
-            {activeSection === "gen" && <GenInfo onDataReceived={handleData} />}
-            {activeSection === "edu" && <Edu onDataReceived={handleData}/>}
-            {activeSection === "work" && <WorkHistory onDataReceived={handleData}/>}
+            <AnimatePresence mode="wait">
+              {activeSection === "gen" && (
+                <motion.div
+                  key={"gen"}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <GenInfo onDataReceived={handleData} />
+                </motion.div>
+              )}
+
+              {activeSection === "edu" && (
+                <motion.div
+                  key={"edu"}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Edu onDataReceived={handleData} />
+                </motion.div>
+              )}
+
+              {activeSection === "work" && (
+                <motion.div
+                  key={"work"}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <WorkHistory onDataReceived={handleData} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
           <div id="formTitles">
             <h2 id="genTitle" className="sectionTitle" onClick={titleClick}>
@@ -99,10 +174,24 @@ function Content() {
           <div id="resumeWH">
             <h3>Work History</h3>
             <ul id="whSection">
-              {whData.map((w, i) => (
-                <li key={i}>{w}</li>
+              {whData.map((job, i) => (
+                <li key={i}>
+                  <h4>
+                    {job.company} — {job.title}
+                  </h4>
+                  <p>
+                    {job.start} – {job.end}
+                  </p>
+
+                  {Array.isArray(job.tasks) && job.tasks.length > 0 && (
+                    <ul>
+                      {job.tasks.map((t, idx) => (
+                        <li key={idx}>{t}</li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
               ))}
-              
             </ul>
           </div>
         </div>

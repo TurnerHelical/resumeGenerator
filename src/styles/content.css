@@ -10,6 +10,7 @@ main {
 
 #TitleCtr {
     grid-area: 1 / 1 / 2 / 3;
+    animation: 2s fade-in ;
 }
 
 #contentCtr {
@@ -103,7 +104,6 @@ main {
     text-align: center;
     font-size: 48px;
     opacity: 1;
-    transition: opacity 1s ease;
     margin-top: 30px;
 }
 
@@ -146,4 +146,6 @@ main {
     cursor: pointer;
     transform: translateX(60%);
 }
+
+
 

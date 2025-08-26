@@ -32,21 +32,12 @@ import "../styles/workHistory.css";
       };
       const next = [...workHistory, job]
       setWorkHistory(next);
-      console.log('next workHistory:',job);
+      props.onDataReceived(next);
       clearForm();
       
     };
 
-    const addToResume = () => {
-      
-      console.log(workHistory);
-      const myForm = document.querySelector('#whForm');
-      const taskList = document.querySelector('#listOfTasks');
-      taskList.innerHTML = ''
-      myForm.reset();
     
-
-    }
 
     const clearForm = () => {
       setCompany("");
