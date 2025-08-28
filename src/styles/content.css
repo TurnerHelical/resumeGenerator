@@ -1,17 +1,13 @@
 @import './global.css';
 
 main {
-    display: flex;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
     min-height: 100vh;
     background-color: var(--bg-dark);
     justify-content: center;
-    gap: 200px;
 }
 
-#TitleCtr {
-    grid-area: 1 / 1 / 2 / 3;
-    animation: 2s fade-in ;
-}
 
 #contentCtr {
     display: grid;
@@ -29,6 +25,7 @@ main {
     justify-self: center;
     display: grid;
     grid-template: 90px 140px 1fr / 1fr;
+    justify-self: start;
 }
 
 #resumeGenInfo {
@@ -99,23 +96,23 @@ main {
     margin-left: 30px;
 }
 
-#pageTitle {
-    color: var(--lightText);
-    text-align: center;
-    font-size: 48px;
-    opacity: 1;
-    margin-top: 30px;
-}
 
 #whSection {
     margin-top: 20px;
 }
 
+#activeTitle {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
 #formCtr {
-    margin-top: -400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 #formTitles {

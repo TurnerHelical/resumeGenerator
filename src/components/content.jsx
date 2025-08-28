@@ -29,9 +29,10 @@ function Content() {
     <>
       <main>
         <div id="contentCtr">
-          <div id="TitleCtr">
-            <h2 id="pageTitle">
-              <AnimatePresence mode="wait">
+          
+            <div id="formCtr">
+            <AnimatePresence mode="wait">
+
               {activeSection === null && (
                 <motion.div
                   key={null}
@@ -39,52 +40,10 @@ function Content() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  >
-                    Click on a tab to begin!
-                  </motion.div>
+                >
+                  <h2 id="activeTitle">Click on a tab to begin!</h2>
+                </motion.div>
               )}
-
-              {activeSection === 'gen' && (
-                <motion.div
-                  key={'gen'}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  >
-                    General Info
-                  </motion.div>
-              )}
-              
-              {activeSection === 'edu' && (
-                <motion.div
-                  key={'edu'}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  >
-                    Education
-                  </motion.div>
-              )}
-              
-              {activeSection === 'work' && (
-                <motion.div
-                  key={'work'}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  >
-                    Work History
-                  </motion.div>
-            
-              )}
-              </AnimatePresence>
-            </h2>
-          </div>
-          <div id="formCtr">
-            <AnimatePresence mode="wait">
               {activeSection === "gen" && (
                 <motion.div
                   key={"gen"}
@@ -93,6 +52,7 @@ function Content() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                 >
+                  <h2 id="activeTitle">General Information</h2>
                   <GenInfo onDataReceived={handleData} />
                 </motion.div>
               )}
@@ -105,6 +65,7 @@ function Content() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                 >
+                  <h2 id="activeTitle">Education</h2>
                   <Edu onDataReceived={handleData} />
                 </motion.div>
               )}
@@ -117,6 +78,7 @@ function Content() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                 >
+                  <h2 id="activeTitle">Work History</h2>
                   <WorkHistory onDataReceived={handleData} />
                 </motion.div>
               )}
