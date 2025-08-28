@@ -9,7 +9,6 @@ function Content() {
   const [genData, setGenData] = useState();
   const [eduData, setEdu] = useState([]);
   const [whData, setWhData] = useState([]);
-  const eduPlaceholder = [{school: 'Universiry of somewhere', degree: 'Associates', program: 'Computers', dateGrad: '01/01'}]
 
   const handleData = (data, form) => {
     if (form === "gen") {
@@ -116,14 +115,16 @@ function Content() {
           </div>
           <div id="resumeEdu">
             <h3>Education</h3>
+            <div id="schoolCtr">
             {eduData.map((edu, i) => (
-              <div key={i}>
+              <div key={i} className="schoolList">
                 <h4>{edu.school}</h4>
                 <p>{edu.degree}</p>
                 <p>{edu.program}</p>
                 <p>{edu.dateGrad}</p>
               </div>
-            ))}
+            )) }
+            </div>
           </div>
           <div id="resumeWH">
             <h3>Work History</h3>
