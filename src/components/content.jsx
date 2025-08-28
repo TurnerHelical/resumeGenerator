@@ -6,12 +6,19 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Content() {
-  // const [genData, setGenData] = useState('');
-  // const [eduData, setEdu] = useState([]);
+  const [genData, setGenData] = useState('');
+  const [eduData, setEdu] = useState([]);
   const [whData, setWhData] = useState([]);
 
-  const handleData = (data) => {
-    setWhData(data);
+  const handleData = (data, form) => {
+    console.log(form);
+    if (form === 'gen') {
+      setGenData(data);
+    } else if (form === 'edu') {
+      setEdu(data);
+    } else {
+      setWhData(data);
+    };
   };
 
   const [activeSection, setActiveSection] = useState(null);
@@ -111,27 +118,14 @@ function Content() {
           </div>
           <div id="resumeEdu">
             <h3>Education</h3>
-            <div className="eduEntry">
-              <h5>University of Central Florida</h5>
-              <p>Bachelor's of Science</p>
-              <p>Computer Science</p>
-              <p>2010-2014</p>
-              <p>Orlando,FL</p>
-            </div>
-            <div className="eduEntry">
-              <h5>University of Central Florida</h5>
-              <p>Bachelor's of Science</p>
-              <p>Computer Science</p>
-              <p>2010-2014</p>
-              <p>Orlando,FL</p>
-            </div>
-            <div className="eduEntry">
-              <h5>University of Central Florida</h5>
-              <p>Bachelor's of Science</p>
-              <p>Computer Science</p>
-              <p>2010-2014</p>
-              <p>Orlando,FL</p>
-            </div>
+              {eduData.map((edu, i) => (
+                  <div key={i}>
+                    <h4>{edu.school}</h4>
+                    <p>{edu.degree}</p>
+                    <p>{edu.program}</p>
+                    <p>{edu.dateGrad}</p>
+                  </div>
+              ))}
           </div>
           <div id="resumeWH">
             <h3>Work History</h3>

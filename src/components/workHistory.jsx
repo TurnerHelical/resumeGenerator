@@ -31,7 +31,7 @@ import "../styles/workHistory.css";
       end: end,
       };
       const next = [...workHistory, job]
-      setWorkHistory(next);
+      setWorkHistory(next, 'history');
       props.onDataReceived(next);
       clearForm();
       
