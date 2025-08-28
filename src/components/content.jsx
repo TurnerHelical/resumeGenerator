@@ -139,7 +139,7 @@ function Content() {
                   </p>
 
                   {Array.isArray(job.tasks) && job.tasks.length > 0 && (
-                    <ul>
+                    <ul id="taskList">
                       {job.tasks.map((t, idx) => (
                         <li key={idx}>{t}</li>
                       ))}
