@@ -9,6 +9,7 @@ function Content() {
   const [genData, setGenData] = useState();
   const [eduData, setEdu] = useState([]);
   const [whData, setWhData] = useState([]);
+  const eduPlaceholder = [{school: 'Universiry of somewhere', degree: 'Associates', program: 'Computers', dateGrad: '01/01'}]
 
   const handleData = (data, form) => {
     if (form === "gen") {
@@ -107,10 +108,10 @@ function Content() {
 
         <div id="resumePaper">
           <div id="resumeGenInfo">
-            <h2 id="placedName">{genData?.name || ""}</h2>
+            <h2 id="placedName">{genData?.name || 'Your Name'}</h2>
             <div id="addressCtr">
-              <p id="placedEmail">{genData?.email || ""}</p>
-              <p id="placedAddress">{genData?.address || ""}</p>
+              <p id="placedEmail">{genData?.email || "email@email.com"}</p>
+              <p id="placedAddress">{genData?.address || "123 Sunny Lane, Austin, TX"}</p>
             </div>
           </div>
           <div id="resumeEdu">
