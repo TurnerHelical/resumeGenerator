@@ -3,7 +3,7 @@ import GenInfo from "./genInfo";
 import Edu from "./edu";
 import WorkHistory from "./workHistory";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 
 function Content() {
   const [genData, setGenData] = useState();
@@ -38,7 +38,7 @@ function Content() {
           <div id="formCtr">
             <AnimatePresence mode="wait">
               {activeSection === null && (
-                <motion.div
+                <Motion.div
                   key={null}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -46,10 +46,10 @@ function Content() {
                   transition={{ duration: 0.3 }}
                 >
                   <h2 id="activeTitle">Click on a tab to begin!</h2>
-                </motion.div>
+                </Motion.div>
               )}
               {activeSection === "gen" && (
-                <motion.div
+                <Motion.div
                   key={"gen"}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -58,11 +58,11 @@ function Content() {
                 >
                   <h2 id="activeTitle">General Information</h2>
                   <GenInfo onDataReceived={handleData} />
-                </motion.div>
+                </Motion.div>
               )}
 
               {activeSection === "edu" && (
-                <motion.div
+                <Motion.div
                   key={"edu"}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -71,11 +71,11 @@ function Content() {
                 >
                   <h2 id="activeTitle">Education</h2>
                   <Edu onDataReceived={handleData} />
-                </motion.div>
+                </Motion.div>
               )}
 
               {activeSection === "work" && (
-                <motion.div
+                <Motion.div
                   key={"work"}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -84,7 +84,7 @@ function Content() {
                 >
                   <h2 id="activeTitle">Work History</h2>
                   <WorkHistory onDataReceived={handleData} />
-                </motion.div>
+                </Motion.div>
               )}
             </AnimatePresence>
           </div>
