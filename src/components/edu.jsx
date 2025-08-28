@@ -72,10 +72,10 @@ function Edu(props) {
             <div className="formFields">
               <label htmlFor="completed" className="eduLabel">When did you graduate:</label>
               <input
-                type="date"
+                type="month"
                 name="completed"
                 id="completed"
-                placeholder="01/01/01"
+                placeholder="04/2025"
                 value={dateGrad}
                 onChange= {(e) => setDateGrad(e.target.value)}
               ></input>

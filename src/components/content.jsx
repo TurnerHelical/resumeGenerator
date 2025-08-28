@@ -6,19 +6,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Content() {
-  const [genData, setGenData] = useState('');
+  const [genData, setGenData] = useState();
   const [eduData, setEdu] = useState([]);
   const [whData, setWhData] = useState([]);
 
   const handleData = (data, form) => {
-    console.log(form);
-    if (form === 'gen') {
+    if (form === "gen") {
       setGenData(data);
-    } else if (form === 'edu') {
+    } else if (form === "edu") {
       setEdu(data);
     } else {
       setWhData(data);
-    };
+    }
   };
 
   const [activeSection, setActiveSection] = useState(null);
@@ -36,10 +35,8 @@ function Content() {
     <>
       <main>
         <div id="contentCtr">
-          
-            <div id="formCtr">
+          <div id="formCtr">
             <AnimatePresence mode="wait">
-
               {activeSection === null && (
                 <motion.div
                   key={null}
@@ -110,22 +107,22 @@ function Content() {
 
         <div id="resumePaper">
           <div id="resumeGenInfo">
-            <h2 id="placedName">Hunter LeClair</h2>
+            <h2 id="placedName">{genData?.name || ""}</h2>
             <div id="addressCtr">
-              <p id="placedEmail">Hunterde91@gmail.com</p>
-              <p id="placedAddress">123 Sunny Lane Sarasota, FL 34231</p>
+              <p id="placedEmail">{genData?.email || ""}</p>
+              <p id="placedAddress">{genData?.address || ""}</p>
             </div>
           </div>
           <div id="resumeEdu">
             <h3>Education</h3>
-              {eduData.map((edu, i) => (
-                  <div key={i}>
-                    <h4>{edu.school}</h4>
-                    <p>{edu.degree}</p>
-                    <p>{edu.program}</p>
-                    <p>{edu.dateGrad}</p>
-                  </div>
-              ))}
+            {eduData.map((edu, i) => (
+              <div key={i}>
+                <h4>{edu.school}</h4>
+                <p>{edu.degree}</p>
+                <p>{edu.program}</p>
+                <p>{edu.dateGrad}</p>
+              </div>
+            ))}
           </div>
           <div id="resumeWH">
             <h3>Work History</h3>
