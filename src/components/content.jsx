@@ -6,7 +6,7 @@ import { useState } from "react";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 
 function Content() {
-  const [genData, setGenData] = useState();
+  const [genData, setGenData] = useState(null);
   const [eduData, setEdu] = useState([]);
   const [whData, setWhData] = useState([]);
 
@@ -19,6 +19,13 @@ function Content() {
       setWhData(data);
     }
   };
+
+  const clearGenInfo = () => {
+    if ((genData?.name ?? 'Your Name')=== 'Your Name') return;
+    if (confirm('Remove this entry')) {
+      setGenData(null)
+    }
+  }
 
   const [activeSection, setActiveSection] = useState(null);
   const titleClick = (event) => {
@@ -106,8 +113,8 @@ function Content() {
         </div>
 
         <div id="resumePaper">
-          <div id="resumeGenInfo">
-            <h2 id="placedName">{genData?.name || 'Your Name'}</h2>
+          <div id="resumeGenInfo" onClick= {clearGenInfo}>
+            <h2 id="placedName"  >{genData?.name || 'Your Name'}</h2>
             <div id="addressCtr">
               <p id="placedEmail">{genData?.email || "email@email.com"}</p>
               <p id="placedAddress">{genData?.address || "123 Sunny Lane, Austin, TX"}</p>

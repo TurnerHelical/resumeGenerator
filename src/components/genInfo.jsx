@@ -17,7 +17,9 @@ function GenInfo(props) {
       name, email, address
     };
     props.onDataReceived(info,'gen');
-  }}
+  }};
+
+
   return (
     <>
       

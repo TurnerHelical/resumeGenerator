@@ -9,11 +9,6 @@ main {
 }
 
 
-#contentCtr {
-    display: grid;
-    grid-template: .25fr 1fr /  1fr;
-}
-
 #resumePaper {
     height: 850px;
     width: 600px;
