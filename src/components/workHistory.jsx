@@ -21,7 +21,20 @@ function WorkHistory(props) {
   const handleSubmit = (comp, jobTitle, tasks, start, end) => {
     if (comp === "" || jobTitle === "" || tasks === "" || start === "") {
       return alert("Please make sure to fill everything in");
-    } else {
+    } else if (end === '') {
+        setEndDate('Current');
+        const job = {
+          company: comp,
+          title: jobTitle,
+          tasks: tasks,
+          start: start,
+          end: end,
+        };
+        const next = [...workHistory, job];
+        setWorkHistory(next, "history");
+        props.onDataReceived(next);
+        clearForm();
+      } else {
       const job = {
         company: comp,
         title: jobTitle,

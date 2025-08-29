@@ -10,11 +10,14 @@ function GenInfo(props) {
 
 
   const handleSubmit = () => {
+    if (name === '' || email === '' || address === '') {
+      return alert('Please enter the missing information')
+    } else {
     const info = {
       name, email, address
     };
     props.onDataReceived(info,'gen');
-  }
+  }}
   return (
     <>
       

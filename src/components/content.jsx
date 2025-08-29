@@ -135,7 +135,7 @@ function Content() {
                     {job.company} — <em>{job.title}</em>
                   </h4>
                   <p>
-                    {job.start} – {job.end}
+                    {job.start} – {(job.end === '' ? 'Current' : job.end)}
                   </p>
 
                   {Array.isArray(job.tasks) && job.tasks.length > 0 && (
