@@ -125,6 +125,7 @@ function WorkHistory(props) {
 
         <div id="dateRangeCtr">
           <p>When did you work there:</p>
+          <p>(Leave blank for current)</p>
           <div id="dateRange">
             <label htmlFor="startDate">Start Date:</label>
             <input

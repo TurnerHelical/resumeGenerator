@@ -10,6 +10,9 @@ function Edu(props) {
   const [dateGrad, setDateGrad] = useState('');
 
   const handleSubmit = (school, degree, program, dateGrad) => {
+    if (school === '' || degree === '' || program === '' || dateGrad === '') {
+      return alert('Please fill all the information in');
+    } else {
     const edu = {
       school: school,
       degree: degree,
@@ -20,7 +23,7 @@ function Edu(props) {
     setEducation(next);
     props.onDataReceived(next, 'edu');
     clearForm();
-  };
+  }};
 
   const clearForm = () => {
     setSchool('');
